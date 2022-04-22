@@ -1,0 +1,25 @@
+
+<header>
+<link rel="stylesheet" href="header.component.css" type="text/css">
+  <div class="navbar navbar-dark bg-primary shadow-sm">
+    <div class="container">
+    <div class="navbar-brand align-item-center d-flex">
+      <i style= "font-size: 40px;" class="fas fa-shipping-fast">
+      </i>
+      <strong style = "font-size: 30px;">Flipcart.</strong>
+      <div class="form-goup">
+        <input type="text" class="form-control" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="search products">
+      </div>
+      <span class="fas fa-search search-icon"></span>
+      
+    </div>
+    <button class="btn btn-primary" (click)="btnClick();" >SignIn</button>
+    <button class="btn btn-primary" (click)="btnClick();">SignUp</button>
+    <button routerLink="cart" class="btn btn-primary">
+      <i style="font-size: 30px; left: 20%;" class="fas fa-cart-plus"></i>
+      <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
+    </button>
+    </div>
+  </div>
+
+</header>
